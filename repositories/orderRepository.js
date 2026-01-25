@@ -2,10 +2,10 @@ const db = require('../models/db')
 
 exports.placeOrderTransaction = (productId, quantity) => {
   return new Promise((resolve, reject) => {
-    db.serialize(() => {
-      db.run("BEGIN TRANSACTION")
+    // Do NOT use db.serialize + BEGIN TRANSACTION manually
+    db.run("BEGIN IMMEDIATE TRANSACTION", (err) => {
+      if (err) return reject(new Error("Database busy or another transaction is active"))
 
-      // Atomic stock deduction
       const updateQuery = `
         UPDATE products
         SET stock = stock - ?
@@ -18,13 +18,11 @@ exports.placeOrderTransaction = (productId, quantity) => {
           return reject(err)
         }
 
-        // If no rows updated, product doesn't exist or stock insufficient
         if (this.changes === 0) {
           db.run("ROLLBACK")
           return reject(new Error("Product not found or insufficient stock"))
         }
 
-        // Create order
         const insertOrder = `
           INSERT INTO orders (productId, quantity, status)
           VALUES (?, ?, ?)
@@ -36,10 +34,12 @@ exports.placeOrderTransaction = (productId, quantity) => {
             return reject(err)
           }
 
-          db.run("COMMIT")
-          resolve({
-            orderId: this.lastID,
-            status: "SUCCESS"
+          db.run("COMMIT", (err) => {
+            if (err) return reject(err)
+            resolve({
+              orderId: this.lastID,
+              status: "SUCCESS"
+            })
           })
         })
       })
