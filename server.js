@@ -1,4 +1,6 @@
 require('dotenv').config()
+require('./models/initDb')
+
 const express = require('express')
 const orderRoutes = require('./routes/orderRoutes')
 

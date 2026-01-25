@@ -1,12 +1,14 @@
-const mysql = require('mysql2/promise')
+const sqlite3 = require('sqlite3').verbose()
+const path = require('path')
 
-const pool = mysql.createPool({
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASS,
-  database: process.env.DB_NAME,
-  waitForConnections: true,
-  connectionLimit: 10
+const dbPath = path.join(__dirname, 'database.sqlite')
+
+const db = new sqlite3.Database(dbPath, (err) => {
+  if (err) {
+    console.error('Failed to connect to database', err)
+  } else {
+    console.log('Connected to SQLite database')
+  }
 })
 
-module.exports = pool
+module.exports = db
