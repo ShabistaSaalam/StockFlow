@@ -1,75 +1,73 @@
 # -------------------
-# Node dependencies
+# Node / Backend
 # -------------------
-node_modules/
+**/node_modules/
+**/package-lock.json
+**/yarn.lock
 
-# -------------------
 # SQLite database files
-# -------------------
-*.sqlite
+**/*.sqlite
 
-# -------------------
 # Environment variables
-# -------------------
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+**/.env
+**/.env.local
+**/.env.development.local
+**/.env.test.local
+**/.env.production.local
 
-# -------------------
-# React / Frontend build output
-# -------------------
-/frontend/build
-/frontend/dist
+# Backend build output
+**/backend/build
+**/backend/dist
 
-# -------------------
-# Backend build output (if any)
-# -------------------
-/backend/build
-/backend/dist
-
-# -------------------
 # Testing coverage
+**/coverage
+
 # -------------------
-/coverage
+# React / Frontend
+# -------------------
+**/frontend/build
+**/frontend/dist
 
 # -------------------
 # Flutter / Dart
 # -------------------
-# Flutter / Dart
-/flutter/.dart_tool/
-/flutter/.packages
-/flutter/.pub/
-/flutter/build/
+**/.dart_tool/
+**/.packages
+**/.pub/
+**/build/
 
-/flutter/android/.gradle/
-/flutter/android/local.properties
-/flutter/android/key.properties
-/flutter/android/**/GeneratedPluginRegistrant.java
+# Android
+**/android/.gradle/
+**/android/local.properties
+**/android/key.properties
+**/android/**/GeneratedPluginRegistrant.java
 
-/flutter/ios/Flutter/App.framework
-/flutter/ios/Flutter/Flutter.framework
-/flutter/ios/Flutter/Generated.xcconfig
-/flutter/ios/Flutter/app.flx
-/flutter/ios/Flutter/Flutter.podspec
-/flutter/ios/Pods/
-/flutter/ios/.symlinks/
-/flutter/ios/Runner.xcworkspace/
-/flutter/ios/Flutter/Flutter-Debug.xcconfig
-/flutter/ios/Flutter/Flutter-Release.xcconfig
+# iOS
+**/ios/Flutter/App.framework
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/app.flx
+**/ios/Flutter/Flutter.podspec
+**/ios/Pods/
+**/ios/.symlinks/
+**/ios/Runner.xcworkspace/
+**/ios/Flutter/Flutter-Debug.xcconfig
+**/ios/Flutter/Flutter-Release.xcconfig
 
-/flutter/macos/Flutter/ephemeral/
-/flutter/macos/Runner.xcworkspace/
-/flutter/macos/Pods/
-/flutter/macos/Flutter/GeneratedPluginRegistrant.swift
+# macOS
+**/macos/Flutter/ephemeral/
+**/macos/Runner.xcworkspace/
+**/macos/Pods/
+**/macos/Flutter/GeneratedPluginRegistrant.swift
 
-/flutter/windows/flutter/ephemeral/
-/flutter/linux/flutter/ephemeral/
+# Windows / Linux
+**/windows/flutter/ephemeral/
+**/linux/flutter/ephemeral/
 
-/flutter/.idea/
-/flutter/.vscode/
-/flutter/*.iml
+# IDEs
+**/.idea/
+**/.vscode/
+**/*.iml
 
 # -------------------
 # Misc / OS
@@ -82,3 +80,33 @@ yarn-error.log*
 .pnp
 .pnp.js
 
+# Flutter / Dart
+/inventory_allocation_system/flutter/.dart_tool/
+/inventory_allocation_system/flutter/.packages
+/inventory_allocation_system/flutter/.pub/
+/inventory_allocation_system/flutter/build/
+/inventory_allocation_system/flutter/.metadata
+
+/inventory_allocation_system/flutter/android/.gradle/
+/inventory_allocation_system/flutter/android/local.properties
+/inventory_allocation_system/flutter/android/key.properties
+/inventory_allocation_system/flutter/android/**/GeneratedPluginRegistrant.java
+
+/inventory_allocation_system/flutter/ios/Pods/
+/inventory_allocation_system/flutter/ios/.symlinks/
+/inventory_allocation_system/flutter/ios/Flutter/Flutter.framework
+/inventory_allocation_system/flutter/ios/Flutter/App.framework
+/inventory_allocation_system/flutter/ios/Flutter/Generated.xcconfig
+/inventory_allocation_system/flutter/ios/Flutter/app.flx
+/inventory_allocation_system/flutter/ios/Flutter/Flutter.podspec
+/inventory_allocation_system/flutter/ios/Runner.xcworkspace/
+/inventory_allocation_system/flutter/ios/Flutter/Flutter-Debug.xcconfig
+/inventory_allocation_system/flutter/ios/Flutter/Flutter-Release.xcconfig
+
+/inventory_allocation_system/flutter/macos/Flutter/ephemeral/
+/inventory_allocation_system/flutter/macos/Runner.xcworkspace/
+/inventory_allocation_system/flutter/macos/Pods/
+/inventory_allocation_system/flutter/macos/Flutter/GeneratedPluginRegistrant.swift
+
+/inventory_allocation_system/flutter/windows/flutter/ephemeral/
+/inventory_allocation_system/flutter/linux/flutter/ephemeral/
