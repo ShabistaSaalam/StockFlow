@@ -7,6 +7,7 @@
 
 # SQLite database files
 **/*.sqlite
+**/*.db
 
 # Environment variables
 **/.env
@@ -18,6 +19,8 @@
 # Backend build output
 **/backend/build
 **/backend/dist
+**/Backend/bin/
+**/Backend/obj/
 
 # Testing coverage
 **/coverage
@@ -80,33 +83,41 @@ yarn-error.log*
 .pnp
 .pnp.js
 
-# Flutter / Dart
-/inventory_allocation_system/flutter/.dart_tool/
-/inventory_allocation_system/flutter/.packages
-/inventory_allocation_system/flutter/.pub/
-/inventory_allocation_system/flutter/build/
-/inventory_allocation_system/flutter/.metadata
+# Flutter / Dart (project-specific)
+inventory_allocation_system/flutter/.dart_tool/
+inventory_allocation_system/flutter/.packages
+inventory_allocation_system/flutter/.pub/
+inventory_allocation_system/flutter/build/
+inventory_allocation_system/flutter/.metadata
 
-/inventory_allocation_system/flutter/android/.gradle/
-/inventory_allocation_system/flutter/android/local.properties
-/inventory_allocation_system/flutter/android/key.properties
-/inventory_allocation_system/flutter/android/**/GeneratedPluginRegistrant.java
+inventory_allocation_system/flutter/android/.gradle/
+inventory_allocation_system/flutter/android/local.properties
+inventory_allocation_system/flutter/android/key.properties
+inventory_allocation_system/flutter/android/**/GeneratedPluginRegistrant.java
 
-/inventory_allocation_system/flutter/ios/Pods/
-/inventory_allocation_system/flutter/ios/.symlinks/
-/inventory_allocation_system/flutter/ios/Flutter/Flutter.framework
-/inventory_allocation_system/flutter/ios/Flutter/App.framework
-/inventory_allocation_system/flutter/ios/Flutter/Generated.xcconfig
-/inventory_allocation_system/flutter/ios/Flutter/app.flx
-/inventory_allocation_system/flutter/ios/Flutter/Flutter.podspec
-/inventory_allocation_system/flutter/ios/Runner.xcworkspace/
-/inventory_allocation_system/flutter/ios/Flutter/Flutter-Debug.xcconfig
-/inventory_allocation_system/flutter/ios/Flutter/Flutter-Release.xcconfig
+inventory_allocation_system/flutter/ios/Pods/
+inventory_allocation_system/flutter/ios/.symlinks/
+inventory_allocation_system/flutter/ios/Flutter/Flutter.framework
+inventory_allocation_system/flutter/ios/Flutter/App.framework
+inventory_allocation_system/flutter/ios/Flutter/Generated.xcconfig
+inventory_allocation_system/flutter/ios/Flutter/app.flx
+inventory_allocation_system/flutter/ios/Flutter/Flutter.podspec
+inventory_allocation_system/flutter/ios/Runner.xcworkspace/
+inventory_allocation_system/flutter/ios/Flutter/Flutter-Debug.xcconfig
+inventory_allocation_system/flutter/ios/Flutter/Flutter-Release.xcconfig
 
-/inventory_allocation_system/flutter/macos/Flutter/ephemeral/
-/inventory_allocation_system/flutter/macos/Runner.xcworkspace/
-/inventory_allocation_system/flutter/macos/Pods/
-/inventory_allocation_system/flutter/macos/Flutter/GeneratedPluginRegistrant.swift
+inventory_allocation_system/flutter/macos/Flutter/ephemeral/
+inventory_allocation_system/flutter/macos/Runner.xcworkspace/
+inventory_allocation_system/flutter/macos/Pods/
+inventory_allocation_system/flutter/macos/Flutter/GeneratedPluginRegistrant.swift
 
-/inventory_allocation_system/flutter/windows/flutter/ephemeral/
-/inventory_allocation_system/flutter/linux/flutter/ephemeral/
+inventory_allocation_system/flutter/windows/flutter/ephemeral/
+inventory_allocation_system/flutter/linux/flutter/ephemeral/
+
+# -------------------
+# .NET Backend / Task 1
+# -------------------
+Mini_Grocery_Order_System/Backend/bin/
+Mini_Grocery_Order_System/Backend/obj/
+Mini_Grocery_Order_System/Backend/*.db
+Mini_Grocery_Order_System/Backend/Properties/launchSettings.json
