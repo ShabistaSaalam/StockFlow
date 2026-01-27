@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Mini Grocery Order System</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-text color="primary">
+    <p *ngIf="message">{{ message }}</p>
+  </ion-text>
+
+  <ion-card *ngFor="let p of products">
+    <ion-card-header>
+      <ion-card-title>{{ p.name }}</ion-card-title>
+      <ion-card-subtitle>
+        Price: ₹{{ p.price }} | Stock: {{ p.stock }}
+      </ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-input
+        type="number"
+        placeholder="Quantity"
+        [(ngModel)]="quantities[p.id]">
+      </ion-input>
+
+      <ion-button expand="block" (click)="placeOrder(p.id)">
+        Place Order
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
