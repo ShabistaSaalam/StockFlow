@@ -121,3 +121,41 @@ Mini_Grocery_Order_System/Backend/bin/
 Mini_Grocery_Order_System/Backend/obj/
 Mini_Grocery_Order_System/Backend/*.db
 Mini_Grocery_Order_System/Backend/Properties/launchSettings.json
+
+# -------------------
+# Angular / Ionic Extra
+# -------------------
+Mini_Grocery_Order_System/Frontend/node_modules/
+Mini_Grocery_Order_System/Frontend/www/
+Mini_Grocery_Order_System/Frontend/dist/
+Mini_Grocery_Order_System/Frontend/.angular/
+Mini_Grocery_Order_System/Frontend/.cache/
+Mini_Grocery_Order_System/Frontend/.npm/
+Mini_Grocery_Order_System/Frontend/.tmp/
+Mini_Grocery_Order_System/Frontend/.vite/
+
+# Logs
+Mini_Grocery_Order_System/Frontend/npm-debug.log*
+Mini_Grocery_Order_System/Frontend/yarn-error.log*
+
+# Capacitor / Mobile Builds
+Mini_Grocery_Order_System/Frontend/android/app/build/
+Mini_Grocery_Order_System/Frontend/android/.gradle/
+Mini_Grocery_Order_System/Frontend/ios/App/build/
+Mini_Grocery_Order_System/Frontend/ios/Pods/
+
+# Test / Coverage
+Mini_Grocery_Order_System/Frontend/coverage/
+Mini_Grocery_Order_System/Frontend/.nyc_output/
+
+# OS / IDE junk inside frontend
+Mini_Grocery_Order_System/Frontend/.DS_Store
+Mini_Grocery_Order_System/Frontend/.vscode/
+Mini_Grocery_Order_System/Frontend/.idea/
+
+# Frontend dev-only config
+Mini_Grocery_Order_System/Frontend/.editorconfig
+Mini_Grocery_Order_System/Frontend/.browserslistrc
+Mini_Grocery_Order_System/Frontend/.eslintrc.json
+Mini_Grocery_Order_System/Frontend/ionic.starter.json
+Mini_Grocery_Order_System/Frontend/.gitignore

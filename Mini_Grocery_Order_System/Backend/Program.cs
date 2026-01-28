@@ -5,6 +5,19 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend",
+        policy =>
+        {
+            policy
+                .WithOrigins("http://localhost:8100")
+                .AllowAnyHeader()
+                .AllowAnyMethod();
+        });
+});
+
+
 // Database
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite("Data Source=grocery.db"));
@@ -37,6 +50,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseCors("AllowFrontend");
 // Map controllers
 app.MapControllers();
 
